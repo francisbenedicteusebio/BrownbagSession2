@@ -1,10 +1,6 @@
-﻿using AutoMapper;
-using BrownbagSession2.Contracts;
-using BrownbagSession2.Data;
+﻿using BrownbagSession2.Data;
 using BrownbagSession2.DTO;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using RestSharp;
 using Serilog;
 using ILogger = Serilog.ILogger;
 
@@ -31,7 +27,7 @@ namespace BrownbagSession2.Services
             await _context.CurrencyCodes.AddRangeAsync(resultMapped);
             await _context.SaveChangesAsync();
 
-            Logger.Information("Currency Exchange Rate successfully added currency {rateCount} codes.", resultMapped.Count);
+            Logger.Information("DataService.UpdateRatesAsync successfully added currency {rateCount} codes.", resultMapped.Count);
             return resultMapped.Count;
         }
 

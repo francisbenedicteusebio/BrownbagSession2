@@ -1,5 +1,4 @@
 ﻿using BrownbagSession2.Configuration;
-using BrownbagSession2.Contracts;
 using BrownbagSession2.Mapping;
 using BrownbagSession2.Services;
 

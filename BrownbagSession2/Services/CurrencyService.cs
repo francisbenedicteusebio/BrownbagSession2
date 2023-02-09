@@ -3,7 +3,6 @@ using AutoMapper;
 using BrownbagSession2.Configuration;
 using BrownbagSession2.Contracts;
 using BrownbagSession2.DTO;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RestSharp;
 using Serilog;
@@ -56,7 +55,7 @@ namespace BrownbagSession2.Services
 
             if (updateRates > 0)
             {
-                Logger.Information("Currency Exchange Rate successfully added currency {rateCount} codes.", updateRates);
+                Logger.Information("CurrencyService.UpdateCurrencyExchangeRates successfully transformed {rateCount} codes.", updateRates);
                 return true;
             }
 

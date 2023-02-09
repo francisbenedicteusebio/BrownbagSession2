@@ -1,5 +1,4 @@
-﻿using BrownbagSession2.Contracts;
-using BrownbagSession2.DTO;
+﻿using BrownbagSession2.DTO;
 using BrownbagSession2.Services;
 using Microsoft.AspNetCore.Mvc;
 

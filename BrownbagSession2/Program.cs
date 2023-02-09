@@ -1,13 +1,13 @@
 using BrownbagSession2.Data;
 using BrownbagSession2.Extensions;
-using BrownbagSession2.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Serilog;
-using Serilog.Formatting.Compact;
 
 
-Log.Logger = new LoggerConfiguration().CreateBootstrapLogger();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console(outputTemplate:
+        "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+    .CreateBootstrapLogger();
 
 try
 {
