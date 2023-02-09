@@ -5,26 +5,25 @@ namespace BrownbagSession2.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class CurrencyForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        private static readonly string[] Summaries = {
+        "Trending", "Losing", "TopGainer-24hrs", "TopLoser24hrs", "Winner-Top5", "52-Week-Champ", "Top-Consisitent-52Weeks", "MostActive", "Winning", "Apocalypse"
     };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<CurrencyForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public CurrencyForecastController(ILogger<CurrencyForecastController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<CurrencyForecast> Get()
         {
             _logger.LogInformation("GetWeatherForecast called");
-            
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+
+            return Enumerable.Range(1, 5).Select(index => new CurrencyForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),

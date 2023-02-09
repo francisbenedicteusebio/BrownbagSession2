@@ -1,6 +1,6 @@
-namespace BrownbagSession2
+namespace BrownbagSession2.Contracts
 {
-    public class WeatherForecast
+    public class CurrencyForecast
     {
         public DateOnly Date { get; set; }
 

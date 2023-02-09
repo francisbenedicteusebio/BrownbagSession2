@@ -4,6 +4,8 @@ using BrownbagSession2.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Serilog;
+using Serilog.Formatting.Compact;
+
 
 Log.Logger = new LoggerConfiguration().CreateBootstrapLogger();
 
