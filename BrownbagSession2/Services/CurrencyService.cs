@@ -40,6 +40,7 @@ namespace BrownbagSession2.Services
             {
                 throw new Exception("Error Retrieving Rates :" + response.Content);
             }
+
             var deserializedResponse = JsonSerializer.Deserialize<ConversionRateApiObject>(response.Content);
             var currencyCodesList = new List<CurrencyCodes>();
             var properties = typeof(ConversionRate).GetProperties();
@@ -58,6 +59,7 @@ namespace BrownbagSession2.Services
                 Logger.Information("CurrencyService.UpdateCurrencyExchangeRates successfully transformed {rateCount} codes.", updateRates);
                 return true;
             }
+
 
             return false;
         }

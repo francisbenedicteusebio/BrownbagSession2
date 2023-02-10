@@ -39,3 +39,13 @@ making it an excellent choice for modern applications.
 Serilog has been designed with performance in mind, and it has been benchmarked to perform well for many common use cases. 
 However, the actual performance will depend on factors such as the number of log messages being generated, the complexity 
 of the log messages, and the number of sinks being used to store the log messages.
+
+AutoMapper is a .NET library that provides a simple and efficient way to map between objects. It automatically maps objects from one type to another, taking care of the details of mapping properties and field values from one type to another.
+
+The main advantage of using AutoMapper is that it reduces the amount of boilerplate code needed for object mapping, making it easier and more efficient to map between objects. It also provides a clear and maintainable way to map between objects, which can save time and effort in the long run, especially in complex mapping scenarios.
+
+Another advantage of AutoMapper is its ability to perform complex mapping operations. For example, it can perform mapping operations that involve nested objects, flattening, and merging of objects, among others.
+
+AutoMapper also provides a way to customize the mapping process by using mapping profiles, where custom mapping rules can be defined for specific types. This allows for fine-grained control over the mapping process, making it possible to handle complex mapping scenarios.
+
+Overall, AutoMapper is a useful tool for reducing the amount of boilerplate code needed for object mapping and providing a clear and maintainable way to map between objects.
